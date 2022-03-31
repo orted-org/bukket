@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nginx:
+    deploy:
+      restart_policy:
+        condition: any
+  node-app:
+    image: itsmehs07/bukket
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: any
+      update_config:
+        parallelism: 1
+        delay: 15s
+        failure_action: rollback
+    build:
+      context: .
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production
+    command: node app.js

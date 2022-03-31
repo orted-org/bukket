@@ -1,0 +1,19 @@
+{
+    "transportOptions": {
+      "host": "smtpout.asia.secureserver.net",
+      "secure": true,
+      "secureConnection": false,
+      "pool":true,
+      "tls": {
+        "ciphers": "SSLv3"
+      },
+      "requireTLS": true,
+      "port": 465,
+      "debug": false,
+      "auth": {
+        "user": "messenger@bukket.cloud",
+        "pass": "MessangerPassword123@"
+      }
+    },
+    "from": "'Bukket' <messenger@bukket.cloud>"
+  }
